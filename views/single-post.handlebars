@@ -1,0 +1,16 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{post.title}}/h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{post.user.name}} on {{post.date_created}}</h6>
+            <p class="card-text">{{post.content}}</p>
+    </div>
+    <form id="new-comment-form">
+        <div class="form-group">
+            <label for="comment-body">Commenting as {{req.session.username}}</label>
+            <textarea class="form-control" id="comment-body" rows="3"></textarea>
+            <input type="hidden" name="post-id" value="{{post.id}}">
+
+            <button class="btn btn-primary" type="submit">Comment</button>
+        </div>
+    </form>
+</div>
