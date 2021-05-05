@@ -13,9 +13,12 @@ Post.init(
             primaryKey: true,
             autoIncrement: true,
         },
+        title: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         content: {
             type: DataTypes.TEXT,
-            length: long,
         },
         date_created: {
             type: DataTypes.DATE,
