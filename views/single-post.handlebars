@@ -1,19 +1,28 @@
-<div class="card" style="width: 18rem;">
+<div class="card">
     <div class="card-body">
-        <h5 class="card-title">{{post.title}}/h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{post.user.name}} on {{post.date_created}}</h6>
-            <p class="card-text">{{post.content}}</p>
+        <h2 class="card-title">{{post.title}}</h5>
+            <h4 class="card-subtitle mb-2 text-muted">{{post.user.username}} on {{post.date_created}}</h6>
+                <p class="card-text">{{post.content}}</p>
     </div>
-    <!--ADD CODE TO DISPLAY COMMENTS HERE-->
-    <form id="new-comment-form">
+    {{#each post.comments as |comment| }}
+    <div class="card m-5" style="margin: 10px;">
+        <div class="card-body">
+            <h5 class=" card-title">{{comment.user.username}}</h5>
+            <h6 class=" card-subtitle mb-20 text-muted"> {{comment.date_created}}</h6>
+            <p class="card-text">{{comment.comment}}</p>
+        </div>
+    </div>
+    {{/each}}
+    <form id="new-comment-form" style="margin: 10px;">
         <div class="form-group">
-            <label for="comment-body">Commenting as {{req.session.username}}</label>
-            <textarea class="form-control" id="comment-body" rows="3"></textarea>
-            <input type="hidden" name="post-id" value="{{post.id}}">
-
+            <label for="comment-body">Commenting as {{user.name}}</label>
+            <br>
+            <textarea class="form-control" id="comment-body" rows="3" cols="50"></textarea>
+            <input type="hidden" id="user-id" value="{{user.id}}">
+            <input type="hidden" id="post-id" value="{{post.id}}">
             <button class="btn btn-primary" type="submit">Comment</button>
         </div>
     </form>
 </div>
 
-<script src="./js/comment.js"></script>
+<script src="../js/comment.js"></script>
