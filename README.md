@@ -4,7 +4,7 @@
 
 ## Description
 
-Tech Blog is a full stack application utilizing Node.js, Express, bCrypt, Handlebars, sequelize and MySQL. Users can sign up, and once logged in have the ability to create blog posts and comment on other users' posts.
+Tech Blog is a full stack application utilizing Node.js, Express, bCrypt, Handlebars, Sequelize and MySQL. Users can sign up, and once logged in have the ability to create blog posts and comment on other users' posts.
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@ Tech Blog is a full stack application utilizing Node.js, Express, bCrypt, Handle
 
 ## Installation
 
-Clone the repo and install Node dependencies, set up a MySQL database, seed the database, and then type npm start. The blog can be accessed by going to http://localhost:3001/ or the address of your hosting provider.
+Clone the repo and install Node dependencies, set up a MySQL database, seed the database (if you want to), and then type npm start. The blog can be accessed by going to http://localhost:3001/ or the address of your hosting provider.
 
 ## Usage
 
