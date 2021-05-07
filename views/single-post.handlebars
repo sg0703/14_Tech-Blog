@@ -1,18 +1,19 @@
 <div class="card">
     <div class="card-body">
         <h2 class="card-title">{{post.title}}</h5>
-            <h4 class="card-subtitle mb-2 text-muted">{{post.user.username}} on {{post.date_created}}</h6>
+            <h4 class="card-subtitle mb-2 text-muted">{{post.user.username}} on {{formatDate post.date_created}}</h6>
                 <p class="card-text">{{post.content}}</p>
     </div>
     {{#each post.comments as |comment| }}
     <div class="card m-5" style="margin: 10px;">
         <div class="card-body">
-            <h5 class=" card-title">{{comment.user.username}}</h5>
-            <h6 class=" card-subtitle mb-20 text-muted"> {{comment.date_created}}</h6>
+            <h4 class="card-subtitle mb-2 text-muted">{{comment.user.username}}</h4>
+            <h6 class=" card-subtitle mb-20 text-muted"> {{formatDate comment.date_created}}</h6>
             <p class="card-text">{{comment.comment}}</p>
         </div>
     </div>
     {{/each}}
+    {{#if loggedIn}}
     <form id="new-comment-form" style="margin: 10px;">
         <div class="form-group">
             <label for="comment-body">Commenting as {{user.name}}</label>
@@ -23,6 +24,9 @@
             <button class="btn btn-primary" type="submit">Comment</button>
         </div>
     </form>
+    {{else}}
+    <h3 style="margin: 10px;">Please login to add a comment!</h3>
+    {{/if}}
 </div>
 
 <script src="../js/comment.js"></script>

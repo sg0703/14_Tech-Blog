@@ -17,7 +17,8 @@ const sess = {
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize
-  })
+  }),
+  expires: 300000,
 };
 
 app.use(session(sess));

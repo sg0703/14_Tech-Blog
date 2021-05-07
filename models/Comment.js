@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/config');
 
-//display the comment, the comment creator’s username, and the date created
+// Comment model has these fields: id, comment, date_created, user_id, post_id
 
 class Comment extends Model {}
 

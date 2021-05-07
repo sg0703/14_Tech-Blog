@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/config');
 
-//post title, contents, post creator’s username, and date created for that post
+//Post model has these fields: id, title, content, date_created, user_id
 
 class Post extends Model {}
 
