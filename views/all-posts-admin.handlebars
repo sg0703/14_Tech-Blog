@@ -2,10 +2,9 @@
 <div class="card">
     <div class="card-body">
         <a href="/dashboard/edit/{{post.id}}">
-            <h2 class=" card-title">{{post.title}}</h2>
+            <h2>{{post.title}}</h2>
+            {{formatDate post.date_created}}
         </a>
-        <p class="card-text">{{post.content}}</p>
-        {{formatDate post.date_created}}
     </div>
 </div>
 {{/each}}

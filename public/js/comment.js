@@ -22,6 +22,7 @@ const commentFormHandler = async function(event) {
   }
 };
 
+// check to see if handlebars rendered comment form (ie user logged in) before attaching event listener
 if(document.querySelector('#new-comment-form')) {
   document
     .querySelector('#new-comment-form')

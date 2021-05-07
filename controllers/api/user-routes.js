@@ -42,9 +42,6 @@ router.post('/login', async (req, res) => {
       req.session.username = user.username;
       req.session.loggedIn = true;
 
-      // set variable to show when session initiated (to control access to comment section)
-      req.session.lastUpdate = Date.now();
-
       res.json({ user, message: 'You are now logged in!' });
     });
   } catch (err) {

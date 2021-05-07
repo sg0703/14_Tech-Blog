@@ -1,5 +1,4 @@
-// write function to shorten conte to "description"
-// write function to format dates
+// helper methods 
 
 module.exports = {
     // render date

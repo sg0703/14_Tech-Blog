@@ -43,6 +43,7 @@ router.get('/post/:id', async (req, res) => {
 
       let user = {name: req.session.username, id: req.session.userId};
 
+      // pass loggedIn variable so if user is not logged in, cannot comment
       let loggedIn = req.session.loggedIn;
 
       // which view should we render for a single-post?
