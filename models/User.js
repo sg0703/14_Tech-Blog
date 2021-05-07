@@ -5,8 +5,10 @@ const sequelize = require('../config/config');
 // checkPassword method to compare hashed password in DB with user input
 
 class User extends Model {
-    checkPassword(loginPass) {
-      return bcrypt.compareSync(loginPass, this.password);
+    async checkPassword(loginPass) {
+      // use async bcrypt compare method
+      const correctPass = await bcrypt.compare(loginPass, this.password);
+      return correctPass;
     }
 }
 
