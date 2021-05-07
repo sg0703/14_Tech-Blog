@@ -21,8 +21,13 @@ module.exports = {
         amPM = 'PM';
         hour -= 12;
     }
-    else if (hour === 12) {
+    // adjust to PM for lunchtime 12
+    if (hour === 12) {
         amPM = 'PM';
+    }
+    // adjust to 12 for midnight
+    if (hour === 0) {
+        hour = 12;
     }
 
     // format time string
