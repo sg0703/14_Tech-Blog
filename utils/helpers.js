@@ -15,7 +15,6 @@ module.exports = {
     if (minutes < 10) {
     minutes = '0' + minutes;
     }
-
     // adjust to 12 hour clock (even though military is better!)
     if (hour > 12) {
         amPM = 'PM';

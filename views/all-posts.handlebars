@@ -2,7 +2,7 @@
 <div class="card">
     <div class="card-body">
         <h2 class="card-title">{{post.title}}</h2>
-        <h4 class="card-subtitle mb-2 text-muted">{{post.user.username}} on {{ formatDate post.date_created}}</h6>
+        <h4 class="card-subtitle mb-2 text-muted">{{post.user.username}} on {{ formatDate post.createdAt}}</h6>
             <p class="card-text">{{post.content}}</p>
             <a href="/post/{{post.id}}" class="card-link">View Post and Comments</a>
     </div>
